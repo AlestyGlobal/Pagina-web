@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b3470" />
+  <meta name="description" content="ALESTY GLOBAL — Transporte de carga local y nacional en Perú. Seguridad, monitoreo 24/7 y atención personalizada para cada operación." />
+  <title>ALESTY GLOBAL — Transporte de carga profesional</title>
+
+  <!-- =============================================================
+       FUENTES
+       ============================================================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- =============================================================
+       ESTILOS — separados por dispositivo
+       1) styles.css → estilos generales + DESKTOP / LAPTOP
+       2) mobile.css → estilos exclusivos MÓVIL / iPHONE
+       ============================================================= -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+<body>
+
+  <!-- =============================================================
+       [SECCIÓN 1] HEADER / MENÚ DE NAVEGACIÓN
+       ============================================================= -->
+  <header class="header" id="header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <img src="assets/Logo/Logo.png" alt="ALESTY GLOBAL">
+      </a>
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#por-que">¿Por qué elegirnos?</a>
+        <a href="#aliados">Aliados</a>
+        <a class="nav-cta" href="#contacto">Contacto</a>
+      </nav>
+      <button class="menu" id="menu" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =============================================================
+         [SECCIÓN 2] HERO / INICIO
+         ============================================================= -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="tag">Transporte profesional · Perú</span>
+          <h1>Cuidamos <span>lo que tú necesitas</span> transportar</h1>
+          <p>Servicio de transporte de carga local y nacional con seguridad, confianza y compromiso en cada entrega.</p>
+          <div class="actions">
+            <a class="btn primary" href="#contacto">Solicitar cotización</a>
+            <a class="btn secondary" href="#servicios">Ver servicios</a>
+          </div>
+        </div>
+
+        <!-- Imagen principal: solo cambias el src -->
+        <div class="hero-photo reveal">
+          <img src="assets/imagenes cuerpo/IMAGEN PRINCIPAL.JPG" alt="ALESTY GLOBAL — Transporte de carga">
+        </div>
+      </div>
+
+      <!-- Cinta azul con features -->
+      <div class="feature-bar">
+        <div class="feature-item"><i data-icon="truck"></i><span>Flota moderna</span></div>
+        <div class="feature-item"><i data-icon="clock"></i><span>Monitoreo continuo</span></div>
+        <div class="feature-item"><i data-icon="map"></i><span>Cobertura nacional</span></div>
+        <div class="feature-item"><i data-icon="shield"></i><span>Seguridad garantizada</span></div>
+        <div class="feature-item"><i data-icon="user"></i><span>Personal capacitado</span></div>
+      </div>
+    </section>
+
+    <!-- =============================================================
+         [SECCIÓN 3] NOSOTROS / ACERCA DE NOSOTROS
+         ============================================================= -->
+    <section class="section" id="nosotros">
+      <div class="container about-grid">
+        <div class="section-copy reveal">
+          <span class="eyebrow">Acerca de nosotros</span>
+          <h2>Líderes en transporte de carga, comprometidos con tu éxito</h2>
+          <p>En <strong>ALESTY GLOBAL</strong> brindamos servicios de transporte de carga local y nacional, enfocados en operaciones seguras, ordenadas y adaptadas a las necesidades de cada cliente.</p>
+          <p>Trabajamos con procesos claros, comunicación constante y un equipo capacitado para asegurar entregas eficientes desde el origen hasta el destino.</p>
+        </div>
+
+        <div class="stats-grid reveal">
+          <article class="stat-card blue">
+            <i data-icon="network"></i>
+            <strong>+10</strong>
+            <span>Aliados estratégicos en puertos, almacenes y depósitos temporales.</span>
+          </article>
+          <article class="stat-card white">
+            <i data-icon="monitor"></i>
+            <strong>24/7</strong>
+            <span>Centro de control para el seguimiento de cada operación.</span>
+          </article>
+          <article class="stat-card white">
+            <i data-icon="shieldcheck"></i>
+            <strong>100%</strong>
+            <span>Cargas aseguradas con cobertura y control operativo.</span>
+          </article>
+          <article class="stat-card blue">
+            <i data-icon="peru"></i>
+            <strong>Nacional</strong>
+            <span>Cobertura para operaciones a nivel local y nacional.</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================
+         [SECCIÓN 4] SERVICIOS — v3 (estilo catálogo limpio)
+         Las imágenes van en /assets/Servicios/
+         Para reemplazar una imagen solo cambia el src.
+         ============================================================= -->
+    <section class="services-v3" id="servicios">
+      <div class="container">
+
+        <!-- Título centrado -->
+        <header class="services-v3-head reveal">
+          <span class="services-v3-eyebrow">Nuestros servicios</span>
+          <p>Servicios pensados para empresas que necesitan seguridad, puntualidad y trazabilidad en cada traslado..</p>
+        </header>
+
+        <!-- Grid de cards (catálogo) -->
+        <div class="services-v3-grid">
+
+          <article class="srv-card reveal">
+            <div class="srv-card-img">
+              <img src="assets/Servicios/transporte_carga.jpg" alt="Transporte de carga">
+            </div>
+            <div class="srv-card-text">
+              <h3>Transporte de carga</h3>
+              <span class="srv-card-line"></span>
+            </div>
+          </article>
+
+          <article class="srv-card reveal">
+            <div class="srv-card-img">
+              <img src="assets/Servicios/carga_seca_peligrosa.jpg" alt="Carga seca y peligrosa">
+            </div>
+            <div class="srv-card-text">
+              <h3>Carga seca y peligrosa</h3>
+              <span class="srv-card-line"></span>
+            </div>
+          </article>
+
+          <article class="srv-card reveal">
+            <div class="srv-card-img">
+              <img src="assets/Servicios/distribucion_logistica.jpg" alt="Distribución logística">
+            </div>
+            <div class="srv-card-text">
+              <h3>Distribución logística</h3>
+              <span class="srv-card-line"></span>
+            </div>
+          </article>
+
+          <article class="srv-card reveal">
+            <div class="srv-card-img">
+              <img src="assets/Servicios/carga_consolidada.jpg" alt="Carga consolidada">
+            </div>
+            <div class="srv-card-text">
+              <h3>Carga consolidada</h3>
+              <span class="srv-card-line"></span>
+            </div>
+          </article>
+
+          <article class="srv-card reveal">
+            <div class="srv-card-img">
+              <img src="assets/Servicios/maniobras_apoyo.jpg" alt="Maniobras y apoyo">
+            </div>
+            <div class="srv-card-text">
+              <h3>Maniobras y apoyo</h3>
+              <span class="srv-card-line"></span>
+            </div>
+          </article>
+
+          <article class="srv-card reveal">
+            <div class="srv-card-img">
+              <img src="assets/Servicios/rutas_nacionales.jpg" alt="Rutas nacionales">
+            </div>
+            <div class="srv-card-text">
+              <h3>Rutas nacionales</h3>
+              <span class="srv-card-line"></span>
+            </div>
+          </article>
+
+          <article class="srv-card reveal">
+            <div class="srv-card-img">
+              <img src="assets/Servicios/carga_reefer.jpg" alt="Carga reefer">
+            </div>
+            <div class="srv-card-text">
+              <h3>Carga reefer</h3>
+              <span class="srv-card-line"></span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================
+         [SECCIÓN 5] ¿POR QUÉ ELEGIRNOS?
+         ============================================================= -->
+    <section class="section why-section" id="por-que">
+      <div class="container center reveal why-head">
+        <span class="eyebrow">¿Por qué elegirnos?</span>
+        <h2>La diferencia de trabajar con un equipo de verdad</h2>
+        <p>Procesos claros, seguimiento constante y atención personalizada para cada operación.</p>
+      </div>
+
+      <div class="container why-grid reveal">
+        <!-- Línea de progreso (en el centro vertical de las cards) -->
+        <div class="why-progress" aria-hidden="true">
+          <div class="why-progress-fill" id="whyProgressFill"></div>
+        </div>
+
+        <article class="why-card" data-step="1">
+          <span class="why-step">01</span>
+          <div class="why-icon">
+            <i data-icon="check"></i>
+            <span class="why-icon-ring"></span>
+            <span class="why-icon-pulse"></span>
+          </div>
+          <h3>100% confiables</h3>
+          <p>Cumplimos lo que prometemos con comunicación transparente y respaldo formal.</p>
+        </article>
+        <article class="why-card" data-step="2">
+          <span class="why-step">02</span>
+          <div class="why-icon">
+            <i data-icon="shield"></i>
+            <span class="why-icon-ring"></span>
+            <span class="why-icon-pulse"></span>
+          </div>
+          <h3>Calidad y seguridad</h3>
+          <p>Protocolos estrictos, unidades controladas y conductores capacitados.</p>
+        </article>
+        <article class="why-card" data-step="3">
+          <span class="why-step">03</span>
+          <div class="why-icon">
+            <i data-icon="clock"></i>
+            <span class="why-icon-ring"></span>
+            <span class="why-icon-pulse"></span>
+          </div>
+          <h3>Monitoreo continuo</h3>
+          <p>Seguimiento activo de la carga desde el punto de origen hasta el destino.</p>
+        </article>
+        <article class="why-card" data-step="4">
+          <span class="why-step">04</span>
+          <div class="why-icon">
+            <i data-icon="user"></i>
+            <span class="why-icon-ring"></span>
+            <span class="why-icon-pulse"></span>
+          </div>
+          <h3>Atención personalizada</h3>
+          <p>Asignamos soluciones según el tipo de carga, ruta y necesidad del cliente.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- =============================================================
+         [SECCIÓN 6] ESENCIA + UNIDADES
+         ============================================================= -->
+    <section class="section split-section">
+      <div class="container split-grid">
+
+        <div class="essence reveal">
+          <header class="block-head">
+            <span class="eyebrow">Nuestra esencia</span>
+            <h2>Misión y visión</h2>
+          </header>
+          <details open>
+            <summary>Misión</summary>
+            <p>Ofrecer servicios de transporte de carga local y nacional enfocados en calidad y seguridad, construyendo relaciones a largo plazo que impulsen el crecimiento mutuo.</p>
+          </details>
+          <details>
+            <summary>Visión</summary>
+            <p>Ser líderes en transporte de carga a nivel nacional, destacándonos por la mejora continua, excelencia operativa y capacidad de superar las expectativas de nuestros clientes.</p>
+          </details>
+        </div>
+
+        <div class="units reveal">
+          <header class="block-head">
+            <span class="eyebrow">Nuestras unidades</span>
+            <h2>Conoce nuestra flota</h2>
+          </header>
+          <div class="unit-collage">
+            <div class="unit-img unit-large"><img src="assets/imagenes cuerpo/Flota2.png" alt="Unidad ALESTY 1"></div>
+            <div class="unit-img unit-small-top"><img src="assets/imagenes cuerpo/Flota1.png" alt="Unidad ALESTY 2"></div>
+            <div class="unit-img unit-small-bottom"><img src="assets/imagenes cuerpo/Flota3.png" alt="Unidad ALESTY 3"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =============================================================
+         [SECCIÓN 7] ALIADOS ESTRATÉGICOS  (13 logos)
+         ============================================================= -->
+    <section class="section allies-section" id="aliados">
+      <div class="container allies-grid">
+        <div class="section-copy reveal">
+          <span class="eyebrow">Aliados estratégicos</span>
+          <h2>Conectamos operaciones con respaldo empresarial</h2>
+          <p>Trabajamos junto a aliados que fortalecen nuestra capacidad operativa en puertos, almacenes y puntos estratégicos del país, brindando un servicio más eficiente, seguro y coordinado en cada operación.</p>
+        </div>
+        <div class="logo-grid reveal">
+          <div class="logo-box"><img src="assets/Aliados/01-alfosac.png" alt="Aliado 1"></div>
+          <div class="logo-box"><img src="assets/Aliados/02-talma.png" alt="Aliado 2"></div>
+          <div class="logo-box"><img src="assets/Aliados/03-dp-world.png" alt="Aliado 3"></div>
+          <div class="logo-box"><img src="assets/Aliados/04-imupesa.png" alt="Aliado 4"></div>
+          <div class="logo-box"><img src="assets/Aliados/05-lifting-global-trade-apm-terminals.png" alt="Aliado 5"></div>
+          <div class="logo-box"><img src="assets/Aliados/06-apm-terminals.png" alt="Aliado 6"></div>
+          <div class="logo-box"><img src="assets/Aliados/07-sakj-depot.png" alt="Aliado 7"></div>
+          <div class="logo-box"><img src="assets/Aliados/08-ransa.png" alt="Aliado 8"></div>
+          <div class="logo-box"><img src="assets/Aliados/09-villas-oquendo.png" alt="Aliado 9"></div>
+          <div class="logo-box"><img src="assets/Aliados/10-puerto-de-chancay.png" alt="Aliado 10"></div>
+          <div class="logo-box"><img src="assets/Aliados/11-almusa.png" alt="Aliado 11"></div>
+          <div class="logo-box"><img src="assets/Aliados/12-impala.png" alt="Aliado 12"></div>
+          <div class="logo-box"><img src="assets/Aliados/13-contrals-demares.png" alt="Aliado 13"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================
+         [SECCIÓN 8] CONTACTO
+         ============================================================= -->
+    <section class="section contact" id="contacto">
+      <div class="container reveal contact-head">
+        <span class="eyebrow">Contáctanos</span>
+        <h2>Solicita tu cotización</h2>
+        <p>Déjanos tus datos o escríbenos directamente. Te responderemos a la brevedad con una propuesta a medida.</p>
+      </div>
+
+      <div class="container contact-grid">
+
+        <!-- IZQUIERDA: FORMULARIO -->
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <header class="form-head">
+            <h3>Envíanos tu solicitud</h3>
+            <p>Completa el formulario y te contactaremos por WhatsApp con tu mensaje ya organizado.</p>
+          </header>
+
+          <div class="field">
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" name="nombre" type="text" required placeholder="Ej. Juan Pérez">
+          </div>
+
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" required placeholder="Ej. 951 324 134">
+          </div>
+
+          <div class="field">
+            <label for="servicio">Servicio que requiere</label>
+            <select id="servicio" name="servicio" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option>Transporte de carga</option>
+              <option>Carga seca y peligrosa</option>
+              <option>Distribución logística</option>
+              <option>Carga consolidada</option>
+              <option>Maniobras y apoyo</option>
+              <option>Rutas nacionales</option>
+              <option>Carga reefer</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué necesitas transportar, origen y destino, fechas, etc."></textarea>
+          </div>
+
+          <button class="btn primary full" type="submit">
+            <span>Enviar solicitud</span>
+            <i data-icon="whatsapp"></i>
+          </button>
+          <p class="form-note" id="formNote">Tu mensaje se abrirá en WhatsApp listo para enviar.</p>
+        </form>
+
+        <!-- DERECHA: INFO + DIRECCIÓN + MAPA -->
+        <aside class="contact-info reveal">
+
+          <div class="info-block">
+            <h3>Contáctanos directamente</h3>
+            <p class="info-sub">Estamos disponibles para atender tu consulta.</p>
+
+            <ul class="social-list" role="list">
+              <li>
+                <a href="https://wa.me/51951324134" target="_blank" rel="noopener" class="social-link" data-tip="WhatsApp">
+                  <i data-icon="whatsapp"></i>
+                  <span class="social-tip">WhatsApp</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/share/1HRNjFjt1M/" target="_blank" rel="noopener" class="social-link" data-tip="Facebook">
+                  <i data-icon="facebook"></i>
+                  <span class="social-tip">Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.tiktok.com/@alestyglobal?_r=1&_t=ZS-967JLy23D2S" target="_blank" rel="noopener" class="social-link" data-tip="TikTok">
+                  <i data-icon="tiktok"></i>
+                  <span class="social-tip">TikTok</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Alestytransport01@gmail.com&su=Consulta%20desde%20la%20web&body=Hola%20ALESTY%20GLOBAL%2C%20quisiera%20cotizar%20un%20servicio.">
+                  <i data-icon="mail"></i>
+                  <span class="social-tip">Correo</span>
+                </a>
+              </li>
+              <!-- Teléfono: muestra solo el número al hacer clic (no llama) -->
+              <li>
+                <a href="#" class="social-link phone-link" data-tip="Teléfono" data-phone="+51 951 324 134" id="phoneLink">
+                  <i data-icon="phone"></i>
+                  <span class="social-tip">Teléfono</span>
+                </a>
+              </li>
+            </ul>
+
+            <!-- Bandeja del número (oculta hasta hacer clic en el icono) -->
+            <div class="phone-display" id="phoneDisplay" hidden>
+              <i data-icon="phone"></i>
+              <span class="phone-number">+51 951 324 134</span>
+              <button type="button" class="phone-copy" id="phoneCopy" aria-label="Copiar número">Copiar</button>
+              <button type="button" class="phone-close" id="phoneClose" aria-label="Cerrar">×</button>
+            </div>
+          </div>
+
+          <div class="info-block address-block">
+            <div class="addr-icon"><i data-icon="pin"></i></div>
+            <div>
+              <h4>Nuestra dirección</h4>
+              <p>Los Olivos · Mz Flt5 Jr Amargón, 12 de Agosto · Lima, Perú</p>
+            </div>
+          </div>
+
+          <div class="map-card">
+            <iframe
+              title="Mapa de ubicación ALESTY GLOBAL"
+              loading="lazy"
+              src="https://www.google.com/maps?q=Jr.+Amarg%C3%B3n+Mz+F+Lt+5,+Urb.+12+de+Agosto,+Los+Olivos,+Lima,+Per%C3%BA&output=embed">
+            </iframe>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =============================================================
+       [SECCIÓN 9] FOOTER
+       ============================================================= -->
+  <footer class="footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <img src="assets/Logo/Logo.png" alt="ALESTY GLOBAL">
+        <p>Transporte de carga local y nacional con seguridad, confianza y compromiso en cada operación.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#por-que">¿Por qué elegirnos?</a></li>
+          <li><a href="#aliados">Aliados</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="#servicios">Transporte de carga</a></li>
+          <li><a href="#servicios">Carga seca y peligrosa</a></li>
+          <li><a href="#servicios">Distribución logística</a></li>
+          <li><a href="#servicios">Rutas nacionales</a></li>
+          <li><a href="#servicios">Carga reefer</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <ul>
+          <li><a href="tel:+51951324134"><i data-icon="phone"></i>+51 951 324 134</a></li>
+          <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=Alestytransport01@gmail.com&su=Consulta%20desde%20la%20web&body=Hola%20ALESTY%20GLOBAL%2C%20quisiera%20cotizar%20un%20servicio."><i data-icon="mail"></i>contacto@alestyglobal.com</a></li>
+          <li><a href="#contacto"><i data-icon="pin"></i>Los Olivos · Lima, Perú</a></li>
+        </ul>
+        <div class="footer-social">
+          <a href="https://wa.me/51951324134" target="_blank" rel="noopener" aria-label="WhatsApp"><i data-icon="whatsapp"></i></a>
+          <a href="https://www.facebook.com/share/1HRNjFjt1M/" target="_blank" rel="noopener" aria-label="Facebook"><i data-icon="facebook"></i></a>
+          <a href="https://www.tiktok.com/@alestyglobal?_r=1&_t=ZS-967JLy23D2S" target="_blank" rel="noopener" aria-label="TikTok"><i data-icon="tiktok"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+      <p>© <span id="year"></span> ALESTY GLOBAL. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =============================================================
+       [SECCIÓN 10] WHATSAPP FLOTANTE
+       ============================================================= -->
+  <a class="whatsapp-fab" id="whatsapp"
+     href="https://wa.me/51951324134?text=Hola%20ALESTY%20GLOBAL%2C%20quisiera%20cotizar%20un%20servicio."
+     target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <span class="wa-pulse" aria-hidden="true"></span>
+    <i data-icon="whatsapp"></i>
+    <span class="wa-label">¿Hablamos?</span>
+  </a>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

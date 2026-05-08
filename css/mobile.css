@@ -1,0 +1,692 @@
+/* =============================================================
+   ALESTY GLOBAL — mobile.css (v3 — rehecho desde cero)
+   Estilos EXCLUSIVOS para móviles, iPhones y tablets pequeñas.
+   -------------------------------------------------------------
+   ÍNDICE:
+   [M01] BASE MÓVIL (variables, tipografía, contenedor)
+   [M02] HEADER MÓVIL
+   [M03] HERO MÓVIL — orden: eyebrow → título → texto → imagen → botones
+   [M04] CINTA AZUL MÓVIL (ordenada y profesional)
+   [M05] NOSOTROS / STAT CARDS MÓVIL
+   [M06] SERVICIOS MÓVIL (catálogo en 1 columna)
+   [M07] ¿POR QUÉ ELEGIRNOS? MÓVIL
+   [M08] ESENCIA + UNIDADES MÓVIL
+   [M09] ALIADOS MÓVIL (13 logos)
+   [M10] CONTACTO MÓVIL (form + info + mapa)
+   [M11] FOOTER MÓVIL
+   [M12] WHATSAPP FLOTANTE MÓVIL
+   [M13] iPHONE SE / pantallas chicas (≤380px)
+   ============================================================= */
+
+
+/* =============================================================
+   [M01] BASE MÓVIL — tipografía proporcional al ancho del celular
+   ============================================================= */
+@media (max-width: 768px){
+
+  /* --- Variables tipográficas reducidas y consistentes --- */
+  :root{
+    --header:    62px;
+    --fs-xs:     .72rem;
+    --fs-sm:     .84rem;
+    --fs-base:   .92rem;
+    --fs-md:     .95rem;
+    --fs-lg:     1.02rem;
+    --fs-xl:     1.12rem;
+    --fs-h3:     1.05rem;
+    --fs-h2:     1.45rem;
+    --fs-h1:     1.7rem;
+  }
+
+  body{
+    font-size: var(--fs-base);
+    line-height: 1.6;
+  }
+
+  /* Texto justificado en TODA la web móvil */
+  p,
+  .hero-copy p,
+  .section-copy p,
+  .center p,
+  .stat-card span,
+  .why-card p,
+  .footer-brand p,
+  .info-sub,
+  .form-head p,
+  .address-block p,
+  .services-v3-head p,
+  .contact-head p,
+  details p{
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  .container{ width: calc(100% - 28px); }
+
+  /* Padding general más reducido para que las secciones no se vean separadas */
+  .section{ padding: 32px 0; }
+  .services-v3{ padding: 38px 0; }
+  .why-section{ padding: 36px 0; }
+  .split-section{ padding: 36px 0; }
+  .allies-section{ padding: 36px 0; }
+  .contact{ padding: 36px 0; }
+
+  /* --- Eyebrow y tag uniformes y pequeños --- */
+  .eyebrow,
+  .tag{
+    font-size: .64rem;
+    padding: 6px 12px;
+    letter-spacing: .12em;
+    font-weight: 700;
+  }
+
+  /* --- Títulos H2 uniformes en todas las secciones --- */
+  .section-copy h2,
+  .center h2,
+  .block-head h2,
+  .contact-head h2{
+    font-size: var(--fs-h2);
+    line-height: 1.25;
+    letter-spacing: -.02em;
+    margin: 10px 0 12px;
+  }
+
+  /* --- Botones que se adaptan al ancho del texto --- */
+  .btn{
+    width: auto;                    /* NO 100% */
+    display: inline-flex;
+    min-height: 44px;
+    padding: 0 22px;
+    font-size: .85rem;
+    border-width: 2px;
+  }
+  .btn.full{ width: 100%; }         /* Solo el de "Enviar solicitud" sigue 100% */
+
+
+  /* =============================================================
+     [M02] HEADER MÓVIL
+     ============================================================= */
+  .brand img{ width: 100px; }
+
+
+  /* =============================================================
+     [M03] HERO MÓVIL — orden correcto y proporciones nuevas
+     1° eyebrow ("Transporte profesional · Perú")
+     2° título ("Cuidamos lo que tú necesitas transportar")
+     3° texto descriptivo
+     4° imagen (tamaño mediano ~240px)
+     5° botones (centrados, cada uno al ancho de su texto)
+     ============================================================= */
+  .hero{
+    min-height: auto;
+    padding-bottom: 80px;
+  }
+  .hero::before{ background-size: 26px 26px; }
+
+  .hero-grid{
+    grid-template-columns: 1fr;
+    padding: 22px 0 80px;
+    gap: 18px;
+  }
+
+  /* Texto del hero PRIMERO en el orden visual */
+  .hero-copy{
+    order: 1;
+    text-align: left;
+  }
+  .tag{
+    margin-bottom: 14px;
+  }
+  .hero-copy h1{
+    font-size: var(--fs-h1);
+    line-height: 1.2;
+    letter-spacing: -.02em;
+    margin: 4px 0 12px;
+    text-align: left;
+  }
+  .hero-copy p{
+    max-width: 100%;
+    font-size: var(--fs-md);
+    margin: 0 0 4px;
+    color: var(--muted);
+  }
+
+  /* Imagen DESPUÉS del texto, tamaño compacto profesional */
+  .hero-photo{
+    order: 2;
+    max-width: 100%;
+    margin: 8px auto;
+    width: 100%;
+  }
+  .hero-photo img{
+    width: 100%;
+    height: auto;
+    max-height: 200px;             /* reducido para que no se vea gigante */
+    object-fit: cover;
+    border-radius: 14px;
+    margin: 0 auto;
+  }
+
+  /* Botones AL FINAL, centrados, cada uno al ancho del texto */
+  .actions{
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;            /* centrados en el contenedor */
+    gap: 10px;
+    margin-top: 14px;
+    width: 100%;
+  }
+  .actions .btn{
+    width: auto;                    /* opción A1: ancho según texto */
+    min-width: 0;
+    padding: 0 28px;
+  }
+
+
+  /* =============================================================
+     [M04] CINTA AZUL MÓVIL — lista vertical estilo "checklist"
+     - Fondo azul de marca (mantiene identidad)
+     - Cada item: icono original + check + texto, alineado a la izquierda
+     - 1 columna, una debajo de otra, espaciada y limpia
+     ============================================================= */
+  .feature-bar{
+    position: relative;
+    display: flex;                                      /* sale del grid */
+    flex-direction: column;
+    background: linear-gradient(135deg, var(--blue-800), #0f5da8);
+    padding: 14px 4px;
+  }
+  .feature-item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    padding: 12px 18px;
+    font-size: .92rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+    border: 0;                                          /* sin bordes raros */
+    position: relative;
+  }
+
+  /* Icono original (camión, reloj, mapa, escudo, persona) — a la izquierda */
+  .feature-item i{
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    color: #bcdcff;                                     /* azul claro suave */
+  }
+  .feature-item i svg{
+    width: 22px;
+    height: 22px;
+    display: block;
+  }
+
+  /* Check pequeño después del icono, antes del texto */
+  .feature-item span{
+    line-height: 1.3;
+    flex: 1;
+    position: relative;
+    padding-left: 26px;                                 /* espacio para el check */
+  }
+  .feature-item span::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.18);
+    border: 1.5px solid rgba(255,255,255,.4);
+    transform: translateY(-50%);
+  }
+  .feature-item span::after{
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    width: 8px;
+    height: 4px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: translateY(-70%) rotate(-45deg);         /* check (✓) */
+  }
+
+  /* Anular reglas previas que generaban grid */
+  .feature-item:nth-child(2n){ border-right: 0; }
+  .feature-item:nth-child(5){
+    grid-column: auto;
+    justify-content: flex-start;
+    border: 0;
+  }
+  .feature-item:nth-child(4){ border-bottom: 0; }
+
+
+  /* =============================================================
+     [M05] NOSOTROS / STAT CARDS MÓVIL
+     ============================================================= */
+  .about-grid{ gap: 28px; }
+
+  .section-copy{
+    text-align: left;
+  }
+  .section-copy .eyebrow{ margin-bottom: 14px; }
+  .section-copy h2{ text-align: left; }
+  .section-copy p{ font-size: var(--fs-md); }
+
+  /* Stats cards apiladas con estructura 2D */
+  .stats-grid{
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 18px;
+  }
+  .stat-card{
+    min-height: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "icon number"
+      "text text";
+    column-gap: 14px;
+    row-gap: 6px;
+    align-items: center;
+  }
+  .stat-card i{
+    grid-area: icon;
+    margin: 0;
+    width: 36px;
+    height: 36px;
+  }
+  .stat-card i svg{ width: 20px; height: 20px; }
+  .stat-card strong{
+    grid-area: number;
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.1;
+  }
+  .stat-card span{
+    grid-area: text;
+    font-size: .85rem;
+    line-height: 1.5;
+  }
+
+
+  /* =============================================================
+     [M06] SERVICIOS MÓVIL — catálogo v3 en 1 columna
+     ============================================================= */
+  .services-v3-head{
+    margin-bottom: 26px;
+    text-align: center;
+  }
+  .services-v3-eyebrow{
+    font-size: .64rem;
+    padding: 6px 12px;
+    margin-bottom: 14px;
+  }
+  .services-v3-head h2{
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+  .services-v3-head p{
+    font-size: .9rem;
+    line-height: 1.55;
+  }
+
+  .services-v3-grid{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .srv-card{ border-radius: 16px; }
+  .srv-card-img{ aspect-ratio: 16 / 11; }
+  .srv-card-text{
+    padding: 18px 16px 22px;
+    gap: 10px;
+  }
+  .srv-card-text h3{
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+  .srv-card-line{
+    width: 28px;
+    height: 2px;
+  }
+  .srv-card:hover .srv-card-line{ width: 56px; }
+
+
+  /* =============================================================
+     [M07] ¿POR QUÉ ELEGIRNOS? MÓVIL
+     ============================================================= */
+  .why-head{ margin-bottom: 8px; }
+  .why-head .eyebrow{ margin-bottom: 14px; }
+  .why-head p{ font-size: .9rem; }
+
+  .why-grid{
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 24px;
+    padding-top: 26px;
+  }
+  .why-progress{ display: none; }
+
+  .why-card{ padding: 30px 20px 22px; }
+  .why-step{
+    font-size: .68rem;
+    padding: 5px 12px;
+    top: -12px;
+  }
+  .why-icon{
+    width: 64px;
+    height: 64px;
+    margin: 4px auto 14px;
+  }
+  .why-icon svg{ width: 24px; height: 24px; }
+  .why-card h3{
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  .why-card p{
+    font-size: .84rem;
+    line-height: 1.55;
+  }
+
+
+  /* =============================================================
+     [M08] ESENCIA + UNIDADES MÓVIL
+     ============================================================= */
+  .split-grid{ gap: 24px; }
+  .essence{ margin-bottom: 4px; }
+  .block-head{
+    min-height: auto;
+    margin-bottom: 14px;
+    gap: 10px;
+  }
+  .block-head h2{ font-size: var(--fs-h2); }
+
+  details{ padding: 14px 18px; margin-top: 10px; }
+  summary{ font-size: .92rem; }
+  details p{ font-size: .85rem; line-height: 1.6; }
+
+  /* Collage de unidades: imagen grande arriba + 2 chicas abajo
+     Adaptadas al ancho real del celular (NO heredan tamaño desktop) */
+  .unit-collage{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 8px;
+    min-height: auto;
+    width: 100%;
+  }
+  .unit-img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 10;                /* proporción compacta */
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+  .unit-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+  }
+  .unit-large{
+    grid-row: 1;
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 9;                 /* la grande un pelín más alta */
+  }
+  .unit-small-top{
+    grid-row: 2;
+    grid-column: 1;
+    aspect-ratio: 4 / 3;                  /* las chicas más cuadraditas */
+  }
+  .unit-small-bottom{
+    grid-row: 2;
+    grid-column: 2;
+    aspect-ratio: 4 / 3;
+  }
+
+
+  /* =============================================================
+     [M09] ALIADOS MÓVIL (13 logos en 2 columnas, último centrado)
+     IMPORTANTE: anular position:sticky de desktop para que el texto
+     haga scroll normalmente y no se "congele" mientras los logos avanzan.
+     ============================================================= */
+  .allies-grid{ gap: 20px; }
+  .allies-grid .section-copy{
+    position: static !important;          /* anula sticky de desktop */
+    top: auto !important;
+  }
+  .allies-grid .section-copy h2{
+    font-size: var(--fs-h2);
+    max-width: 100%;
+  }
+  .allies-grid .section-copy p{
+    font-size: .9rem;
+    max-width: 100%;
+  }
+
+  .logo-grid{
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .logo-box{
+    min-height: 88px;
+    padding: 10px;
+    border-radius: 14px;
+  }
+  .logo-box:nth-child(13){
+    grid-column: 1 / -1;
+    min-height: 100px;
+  }
+
+
+  /* =============================================================
+     [M10] CONTACTO MÓVIL
+     ============================================================= */
+  .contact-head{
+    text-align: left;
+    margin-bottom: 4px;
+  }
+  .contact-head .eyebrow{ margin-bottom: 14px; }
+  .contact-head h2{
+    font-size: var(--fs-h2);
+    text-align: left;
+    margin: 4px 0 10px;
+  }
+  .contact-head p{
+    font-size: var(--fs-md);
+    margin: 0;
+  }
+
+  .contact-grid{
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  /* Formulario */
+  .contact-form{
+    padding: 20px;
+    border-radius: 18px;
+    gap: 12px;
+  }
+  .form-head h3{ font-size: 1.1rem; }
+  .form-head p{ font-size: .85rem; }
+  .field label{ font-size: .68rem; }
+  .field input,
+  .field select,
+  .field textarea{
+    padding: 12px 14px;
+    font-size: 16px;          /* iOS: evita zoom al hacer focus */
+    border-radius: 10px;
+  }
+  .form-note{ font-size: .75rem; }
+
+  /* Info derecha */
+  .info-block{
+    padding: 20px;
+    border-radius: 18px;
+  }
+  .info-block h3{ font-size: 1.1rem; }
+  .info-sub{ font-size: .85rem; margin-bottom: 14px; }
+
+  /* Social: 5 iconos en una fila */
+  .social-list{
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+  .social-link{
+    max-height: 52px;
+    border-radius: 11px;
+  }
+  .social-link svg,
+  .social-link i{ width: 18px; height: 18px; }
+
+  /* Bandeja del teléfono */
+  .phone-display{
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 11px 14px;
+    margin-top: 14px;
+  }
+  .phone-number{
+    flex: 1 1 100%;
+    font-size: .95rem;
+    text-align: left;
+    margin-bottom: 2px;
+  }
+  .phone-copy,
+  .phone-close{ flex: 0 0 auto; }
+
+  /* Dirección */
+  .address-block{
+    padding: 16px;
+    gap: 12px;
+  }
+  .addr-icon{ width: 40px; height: 40px; }
+  .addr-icon svg{ width: 18px; height: 18px; }
+  .address-block h4{ font-size: .95rem; }
+  .address-block p{ font-size: .82rem; }
+
+  /* Mapa */
+  .map-card{
+    min-height: 220px;
+    flex: 0 0 220px;
+    border-radius: 16px;
+  }
+
+
+  /* =============================================================
+     [M11] FOOTER MÓVIL
+     ============================================================= */
+  .footer{ padding-top: 40px; }
+  .footer-grid{
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 26px;
+    padding-bottom: 26px;
+  }
+  .footer-brand img{ width: 150px; margin-bottom: 14px; }
+  .footer-brand p{
+    max-width: 100%;
+    font-size: .84rem;
+    line-height: 1.6;
+  }
+  .footer-col h5{
+    margin: 0 0 14px;
+    font-size: .98rem;
+  }
+  .footer-col a{ font-size: .84rem; }
+  .footer-social{ margin-top: 14px; }
+  .footer-bottom{ padding: 14px 0; }
+  .footer-bottom-inner{
+    flex-direction: column;
+    text-align: center;
+    gap: 4px;
+    font-size: .72rem;
+  }
+
+
+  /* =============================================================
+     [M12] WHATSAPP FLOTANTE MÓVIL
+     ============================================================= */
+  .whatsapp-fab{
+    right: 16px;
+    bottom: 18px;
+    padding: 0;
+    width: 54px;
+    height: 54px;
+    justify-content: center;
+  }
+  .whatsapp-fab .wa-label{ display: none; }
+  .whatsapp-fab i{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    line-height: 0;
+  }
+  .whatsapp-fab svg{
+    width: 22px;
+    height: 22px;
+    display: block;
+  }
+
+}
+
+
+/* =============================================================
+   [M13] iPHONE SE / pantallas muy chicas (≤380px)
+   ============================================================= */
+@media (max-width: 380px){
+
+  :root{
+    --fs-h1: 1.55rem;
+    --fs-h2: 1.32rem;
+  }
+
+  .container{ width: calc(100% - 24px); }
+
+  .hero-copy h1{ font-size: var(--fs-h1); }
+  .section-copy h2,
+  .center h2,
+  .block-head h2,
+  .contact-head h2{ font-size: var(--fs-h2); }
+
+  .hero-photo img{ max-height: 180px; }
+
+  /* Cinta azul: padding ajustado para pantallas muy chicas */
+  .feature-bar{ padding: 10px 2px; }
+  .feature-item{
+    padding: 10px 14px;
+    font-size: .86rem;
+    gap: 12px;
+  }
+
+  /* Social: iconos un poco más pequeños */
+  .social-list{
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+  }
+  .social-link{ max-height: 46px; }
+  .social-link svg,
+  .social-link i{ width: 16px; height: 16px; }
+
+  /* Aliados: 2 columnas pero logos más pequeños */
+  .logo-box{ min-height: 78px; }
+
+  /* Botón del hero más cómodo en pantallas chicas */
+  .actions .btn{ padding: 0 22px; font-size: .82rem; }
+}
